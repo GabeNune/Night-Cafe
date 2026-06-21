@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap);
+
+:root {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Outfit", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+
+  /* Latte Theme - Default */
+  --bg: #0f0d0b;
+  --surface: #181410;
+  --border: #4d3f33;
+  --muted: #7d6b5d;
+  --text: #ede0d5;
+  --soft: #b8a292;
+  --accent: #8d6e63;
+  --accent2: #a1887f;
+  --green: #66bb6a;
+  --red: #ef5350;
+  --blue: #64b5f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}

@@ -1,0 +1,223 @@
+.pageHeader {
+  padding-top: 72px;
+  margin-bottom: 2.5rem;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.pageTitle em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.pageSub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--soft);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* LAYOUT */
+.pomoLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+/* TASK SELECTOR */
+.pomoTaskSelect {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.pomoTaskLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+.pomoTaskActive {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pomoTaskDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c4622d;
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.pomoTaskName {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.pomoSelect {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  color: var(--soft);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.pomoSelect:focus {
+  border-color: var(--accent);
+}
+
+.pomoTaskClear {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  text-align: left;
+}
+
+.pomoTaskClear:hover {
+  color: var(--soft);
+}
+
+/* RING */
+.pomoRing {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.pomoRing svg {
+  transform: rotate(-90deg);
+}
+
+.pomoRingTrack {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 6;
+}
+
+.pomoRingFill {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease, stroke 0.4s ease;
+}
+
+.pomoCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pomoTime {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.pomoLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+/* CONTROLS */
+.pomoControls {
+  display: flex;
+  gap: 12px;
+}
+
+.btnPomo {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 12px 28px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnPomo:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.primary:hover {
+  opacity: 0.85;
+  color: var(--bg);
+}
+
+/* SESSION DOTS */
+.pomoSessions {
+  display: flex;
+  gap: 6px;
+}
+
+.sessionDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c4622d;
+  opacity: 0.25;
+}
+
+.sessionDone {
+  opacity: 1;
+}

@@ -1,0 +1,241 @@
+.pageHeader {
+  padding-top: 72px;
+  margin-bottom: 2.5rem;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.pageTitle em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.pageSub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--soft);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* GRID */
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.dayCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dayLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--soft);
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dayLabelToday {
+  color: var(--accent);
+}
+
+/* BLOCK */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--surface);
+  border-radius: var(--r-sm);
+  padding: 10px;
+  border-left: 2px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition:
+    transform 0.15s,
+    opacity 0.15s;
+}
+
+.block:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.blockHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.blockName {
+  font-size: 0.72rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.blockDel {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.6rem;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.blockDel:hover {
+  color: #8b2500;
+}
+
+.blockTime {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--soft);
+}
+
+/* ADD BUTTON */
+.addBlock {
+  border: 1px dashed var(--border);
+  border-radius: var(--r-sm);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+  transition: all 0.2s;
+}
+
+.addBlock:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* MODAL */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modalTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.modalField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modalLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+.modalSelect,
+.modalInput {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.modalSelect:focus,
+.modalInput:focus {
+  border-color: var(--accent);
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.btnCancel {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 10px 20px;
+  color: var(--soft);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnCancel:hover {
+  border-color: var(--muted);
+  color: var(--text);
+}
+
+.btnConfirm {
+  background: var(--accent);
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 10px 20px;
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnConfirm:hover {
+  opacity: 0.85;
+}

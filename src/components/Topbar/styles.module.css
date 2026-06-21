@@ -1,0 +1,50 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(14,14,17,0.85);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navLink {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--soft);
+  text-decoration: none;  
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.navLink:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.logo {
+  margin-right: auto;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.35rem;
+}
+
+.navLinkAtivo {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgba(196,98,45,0.08);
+  padding: 6px 14px;
+  border-radius: 6px;
+}
